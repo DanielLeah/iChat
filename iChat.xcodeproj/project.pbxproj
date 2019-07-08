@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,12 @@
 		998D151B22CDFEC9008CEE8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 998D151A22CDFEC9008CEE8C /* Assets.xcassets */; };
 		998D151E22CDFEC9008CEE8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 998D151C22CDFEC9008CEE8C /* LaunchScreen.storyboard */; };
 		998D152622CE046D008CEE8C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998D152522CE046C008CEE8C /* WelcomeViewController.swift */; };
+		998D152822CE3D67008CEE8C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 998D152722CE3D67008CEE8C /* GoogleService-Info.plist */; };
+		998D152A22CF4DC1008CEE8C /* FUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998D152922CF4DC1008CEE8C /* FUser.swift */; };
+		998D152C22CF4E23008CEE8C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998D152B22CF4E23008CEE8C /* Constants.swift */; };
+		998D152E22CF508B008CEE8C /* CollectionReferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998D152D22CF508B008CEE8C /* CollectionReferences.swift */; };
+		998D153022CF52CE008CEE8C /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998D152F22CF52CE008CEE8C /* HelperFunctions.swift */; };
+		998D153222D37211008CEE8C /* FinishRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998D153122D37211008CEE8C /* FinishRegistrationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +31,12 @@
 		998D151D22CDFEC9008CEE8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		998D151F22CDFEC9008CEE8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		998D152522CE046C008CEE8C /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		998D152722CE3D67008CEE8C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		998D152922CF4DC1008CEE8C /* FUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FUser.swift; sourceTree = "<group>"; };
+		998D152B22CF4E23008CEE8C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		998D152D22CF508B008CEE8C /* CollectionReferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReferences.swift; sourceTree = "<group>"; };
+		998D152F22CF52CE008CEE8C /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
+		998D153122D37211008CEE8C /* FinishRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishRegistrationViewController.swift; sourceTree = "<group>"; };
 		DD6B38AF151EBEC15B9661EF /* Pods-iChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iChat.debug.xcconfig"; path = "Target Support Files/Pods-iChat/Pods-iChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,12 +83,34 @@
 			children = (
 				998D151322CDFEBF008CEE8C /* AppDelegate.swift */,
 				998D152522CE046C008CEE8C /* WelcomeViewController.swift */,
+				998D153122D37211008CEE8C /* FinishRegistrationViewController.swift */,
+				998D153422D3724C008CEE8C /* Classes */,
+				998D153322D3722F008CEE8C /* Helpers */,
 				998D151722CDFEBF008CEE8C /* Main.storyboard */,
 				998D151A22CDFEC9008CEE8C /* Assets.xcassets */,
 				998D151C22CDFEC9008CEE8C /* LaunchScreen.storyboard */,
+				998D152722CE3D67008CEE8C /* GoogleService-Info.plist */,
 				998D151F22CDFEC9008CEE8C /* Info.plist */,
 			);
 			path = iChat;
+			sourceTree = "<group>";
+		};
+		998D153322D3722F008CEE8C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				998D152B22CF4E23008CEE8C /* Constants.swift */,
+				998D152D22CF508B008CEE8C /* CollectionReferences.swift */,
+				998D152F22CF52CE008CEE8C /* HelperFunctions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		998D153422D3724C008CEE8C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				998D152922CF4DC1008CEE8C /* FUser.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		C62A09D62F9BE9BFAEC810B1 /* Pods */ = {
@@ -85,7 +119,6 @@
 				DD6B38AF151EBEC15B9661EF /* Pods-iChat.debug.xcconfig */,
 				03DF39E6D4EB16D2E42864F5 /* Pods-iChat.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -150,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				998D151E22CDFEC9008CEE8C /* LaunchScreen.storyboard in Resources */,
+				998D152822CE3D67008CEE8C /* GoogleService-Info.plist in Resources */,
 				998D151B22CDFEC9008CEE8C /* Assets.xcassets in Resources */,
 				998D151922CDFEBF008CEE8C /* Main.storyboard in Resources */,
 			);
@@ -204,8 +238,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				998D152A22CF4DC1008CEE8C /* FUser.swift in Sources */,
+				998D152E22CF508B008CEE8C /* CollectionReferences.swift in Sources */,
 				998D151422CDFEBF008CEE8C /* AppDelegate.swift in Sources */,
 				998D152622CE046D008CEE8C /* WelcomeViewController.swift in Sources */,
+				998D152C22CF4E23008CEE8C /* Constants.swift in Sources */,
+				998D153222D37211008CEE8C /* FinishRegistrationViewController.swift in Sources */,
+				998D153022CF52CE008CEE8C /* HelperFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
