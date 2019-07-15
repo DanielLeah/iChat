@@ -91,8 +91,15 @@ class WelcomeViewController: UIViewController {
         cleanTextFields()
         dismissKeyboard()
         
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: USER_DID_LOGIN_NOTIFICATION), object: nil, userInfo: [kUSERID : FUser.currentId()])
+        
         //Present
-        print("Show the app")
+        cleanTextFields()
+        dismissKeyboard()
+        
+        let mainView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainApplication") as! UITabBarController
+        
+        self.present(mainView, animated: true, completion: nil)
     }
     
     //MARK: Navigation
