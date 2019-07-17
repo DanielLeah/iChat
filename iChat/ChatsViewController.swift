@@ -12,7 +12,7 @@ class ChatsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationController?.navigationBar.prefersLargeTitles = true
         
     }
     

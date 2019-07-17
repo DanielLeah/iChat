@@ -23,6 +23,7 @@
 		998D153822D72E96008CEE8C /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998D153722D72E96008CEE8C /* UserTableViewCell.swift */; };
 		998D153B22D89486008CEE8C /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998D153A22D89486008CEE8C /* UsersTableViewController.swift */; };
 		998D153D22DC935E008CEE8C /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998D153C22DC935E008CEE8C /* ChatsViewController.swift */; };
+		99D122C722DF1F1C00B832B0 /* ProfileViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D122C622DF1F1C00B832B0 /* ProfileViewTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		998D153722D72E96008CEE8C /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		998D153A22D89486008CEE8C /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 		998D153C22DC935E008CEE8C /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
+		99D122C622DF1F1C00B832B0 /* ProfileViewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewTableViewController.swift; sourceTree = "<group>"; };
 		DD6B38AF151EBEC15B9661EF /* Pods-iChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iChat.debug.xcconfig"; path = "Target Support Files/Pods-iChat/Pods-iChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +97,7 @@
 				998D153522D5F18D008CEE8C /* SettingsTableViewController.swift */,
 				998D153A22D89486008CEE8C /* UsersTableViewController.swift */,
 				998D153C22DC935E008CEE8C /* ChatsViewController.swift */,
+				99D122C622DF1F1C00B832B0 /* ProfileViewTableViewController.swift */,
 				998D153922D89459008CEE8C /* CustomCells */,
 				998D153422D3724C008CEE8C /* Classes */,
 				998D153322D3722F008CEE8C /* Helpers */,
@@ -260,6 +263,7 @@
 			files = (
 				998D152A22CF4DC1008CEE8C /* FUser.swift in Sources */,
 				998D153822D72E96008CEE8C /* UserTableViewCell.swift in Sources */,
+				99D122C722DF1F1C00B832B0 /* ProfileViewTableViewController.swift in Sources */,
 				998D152E22CF508B008CEE8C /* CollectionReferences.swift in Sources */,
 				998D151422CDFEBF008CEE8C /* AppDelegate.swift in Sources */,
 				998D152622CE046D008CEE8C /* WelcomeViewController.swift in Sources */,
