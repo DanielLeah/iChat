@@ -107,6 +107,27 @@ class UsersTableViewController: UITableViewController, UISearchResultsUpdating, 
         return index
     }
     
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        var user : FUser
+        
+        if searchController.isActive && searchController.searchBar.text != ""{
+            user = filteredUsers[indexPath.row]
+        }else{
+            let sectionTitle = self.sectionTitleList[indexPath.section]
+            
+            let users = self.allUsersGroupped[sectionTitle]
+            
+            user = users![indexPath.row]
+        }
+        
+        startPrivateChat(user1: FUser.currentUser()!, user2: user)
+        
+    }
+    
     func loadUsers(filter: String){
         ProgressHUD.show()
         var query: Query!
@@ -182,7 +203,7 @@ class UsersTableViewController: UITableViewController, UISearchResultsUpdating, 
     }
     
     func filterContentForSearchText(searchText: String, scope: String = "All"){
-        filteredUsers.filter { (user) -> Bool in
+        filteredUsers = allUsers.filter { (user) -> Bool in
             return user.firstname.lowercased().contains(searchText.lowercased())
         }
         tableView.reloadData()
@@ -211,6 +232,23 @@ class UsersTableViewController: UITableViewController, UISearchResultsUpdating, 
     
     //MARK: User Table View Cell Delegate
     func didTapAvatarImg(indexPath: IndexPath) {
-        print("cell tapped : \(indexPath)")
+        
+        let profileVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "profileView") as! ProfileViewTableViewController
+        
+        var user : FUser
+        
+        if searchController.isActive && searchController.searchBar.text != ""{
+            user = filteredUsers[indexPath.row]
+        }else{
+            let sectionTitle = self.sectionTitleList[indexPath.section]
+            
+            let users = self.allUsersGroupped[sectionTitle]
+            
+            user = users![indexPath.row]
+        }
+        
+        profileVC.user = user
+        
+        self.navigationController?.pushViewController(profileVC, animated: true)
     }
 }

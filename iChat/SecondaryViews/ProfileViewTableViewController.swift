@@ -59,6 +59,24 @@ class ProfileViewTableViewController: UITableViewController {
     @IBAction func messageTapped(_ sender: Any) {
     }
     @IBAction func blockTapped(_ sender: Any) {
+        
+        var currentBlockedIDs = FUser.currentUser()!.blockedUsers
+        
+        if currentBlockedIDs.contains(user!.objectId) {
+            let index = currentBlockedIDs.firstIndex(of: user!.objectId)!
+            currentBlockedIDs.remove(at: index)
+        }else {
+            currentBlockedIDs.append(user!.objectId)
+        }
+        
+        updateCurrentUserInFirestore(withValues: [kBLOCKEDUSERID : currentBlockedIDs]) { (error) in
+            if error != nil {
+                print("error updating user \(error!.localizedDescription)")
+                return
+            }
+            self.updateBlockStatus()
+        }
+        
     }
     
 
@@ -82,6 +100,22 @@ class ProfileViewTableViewController: UITableViewController {
     }
     
     func updateBlockStatus(){
+        
+        if user!.objectId != FUser.currentId() {
+            blockButtonOutlet.isHidden = false
+            messageButtonOutlet.isHidden = false
+            callButtonOutlet.isHidden = false
+        }else {
+            blockButtonOutlet.isHidden = true
+            messageButtonOutlet.isHidden = true
+            callButtonOutlet.isHidden = true
+        }
+        
+        if FUser.currentUser()!.blockedUsers.contains(user!.objectId) {
+            blockButtonOutlet.setTitle("Unblock user", for: .normal)
+        }else {
+            blockButtonOutlet.setTitle("Block user", for: .normal)
+        }
         
     }
     
