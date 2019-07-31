@@ -72,7 +72,7 @@ class UsersTableViewController: UITableViewController, UISearchResultsUpdating, 
             let sectionTitle = self.sectionTitleList[indexPath.section]
             
             let users = self.allUsersGroupped[sectionTitle]
-            
+            print("section title is: \(sectionTitle)")
             user = users![indexPath.row]
         }
         
@@ -168,11 +168,12 @@ class UsersTableViewController: UITableViewController, UISearchResultsUpdating, 
                         self.allUsers.append(fUser)
                     }
                     
-                    self.splitDataIntoSections()
-                    self.tableView.reloadData()
+                    
                 }
                 
+                self.splitDataIntoSections()
                 self.tableView.reloadData()
+                
                 ProgressHUD.dismiss()
                 
             }
