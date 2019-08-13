@@ -19,6 +19,13 @@ class OutgoingMessages {
         messageDictionary = NSMutableDictionary(objects: [message, senderID, senderName, dateFormatter().string(from: date), status, type], forKeys: [kMESSAGE as NSCopying, kSENDERID as NSCopying, kSENDERNAME as NSCopying, kDATE as NSCopying, kSTATUS as NSCopying, kTYPE as NSCopying])
     }
     
+    //picture
+    
+    init(message: String, pictureLink: String, senderID: String, senderName: String, date: Date, status: String, type: String){
+        
+        messageDictionary = NSMutableDictionary(objects: [message, pictureLink, senderID, senderName, dateFormatter().string(from: date), status, type], forKeys: [kMESSAGE as NSCopying, kPICTURE as NSCopying, kSENDERID as NSCopying, kSENDERNAME as NSCopying, kDATE as NSCopying, kSTATUS as NSCopying, kTYPE as NSCopying])
+    }
+    
     //MARK: SendMessage
     func sendMessage(chatRoomID: String, messageDictionary: NSMutableDictionary, membersID: [String], membersToPush: [String]){
         
